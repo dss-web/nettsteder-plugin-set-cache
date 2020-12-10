@@ -18,7 +18,7 @@ namespace DSS\Plugin\Set_Cache;
 
 function on_wp_headers( array $headers ) : array {
 	// check if cache control is set in the header .
-	if( isset ( $headers['Cache-Control'] ) and \is_string( $headers['Cache-Control'] ) ) {
+	if( isset ( $headers['Cache-Control'] ) && \is_string( $headers['Cache-Control'] ) ) {
 		$current_cache_control = \array_map( 'trim', \explode( ',', $headers['Cache-Control'] ) );
 
 		// check for no caching.
