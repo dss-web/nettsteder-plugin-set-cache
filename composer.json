@@ -1,0 +1,16 @@
+{
+	"name": "dss-web/nettsteder-plugin-set-cache",
+	"description": "Add missing cache in header.",
+	"type": "wordpress-muplugin",
+	"license": "GPL-3.0-or-later",
+	"authors": [
+		{
+			"name": "Dekode Interaktiv",
+			"homepage": "https://dekode.no"
+		},
+		{
+			"name": "DSS",
+			"homepage": "https://dss.dep.no"
+		}
+	]
+}
