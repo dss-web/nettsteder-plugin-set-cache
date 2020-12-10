@@ -23,7 +23,7 @@ function on_wp_headers( array $headers ) : array {
 
 		// check for no caching.
 		if( \in_array('no-cache', $current_cache_control, true ) ) {
-			// Set defaul caching to 300 seconds / 5 minutes.
+			// Set default caching to 300 seconds / 5 minutes.
 			$seconds_to_cache = \apply_filters( 'dss/nettsteder/plugin/set_cache/seconds_to_cache', 300 );
 			$expires = \gmdate("D, d M Y H:i:s", \time() + $seconds_to_cache) . " GMT";
 			$headers['Expires'] = $expires;
