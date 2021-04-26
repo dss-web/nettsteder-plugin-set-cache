@@ -18,11 +18,15 @@ namespace DSS\Plugin\Set_Cache;
 \add_filter( 'restricted_site_access_is_restricted', __NAMESPACE__ . '\\on_restricted_site_access_is_restricted', 10, 2 );
 
 function on_wp_headers( array $headers ) : array {
+	// Set the default X-DSS-Cache-Control headers
+	$headers['X-DSS-Cache-Control'] = 'Skipped';
+	
 	// check if cache control is set in the header and if not add it.
 	if ( false === \array_key_exists( 'Cache-Control', $headers ) ) {
 		// Set default caching to 300 seconds / 5 minutes. Can be changed using the filter.
 		$seconds_to_cache         = \apply_filters( 'dss/nettsteder/plugin/set_cache/seconds_to_cache', 300 );
 		$headers['Cache-Control'] = 'public, max-age=' . $seconds_to_cache;
+		$headers['X-DSS-Cache-Control'] = $seconds_to_cache;
 	}
 
 	return $headers;
