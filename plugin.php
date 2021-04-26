@@ -4,7 +4,7 @@
  * Plugin URI:   https://github.com/dss-web/nettsteder-plugin-set-cache
  * GitHub Plugin https://github.com/dss-web/nettsteder-plugin-set-cache
  * Description:  Add missing cache in header.
- * Version:      1.1.0
+ * Version:      1.1.1
  * Author:       Dekode Interaktiv / DSS
  *
  * @package DSS/Plugin
